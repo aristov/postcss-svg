@@ -32,7 +32,7 @@
   "dependencies": {
     "postcss": "^7.0.6",
     "postcss-values-parser": "^2.0.0",
-    "svgo": "^1.1.1",
+    "svgo": "^3.0.2",
     "xmldoc": "^1.1.2"
   },
   "devDependencies": {

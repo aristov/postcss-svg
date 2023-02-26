@@ -23,7 +23,7 @@ export default function elementAsDataURISvg(element, document, opts) {
 
 	// promise data URI
 	return (opts.svgo
-		? new Svgo(opts.svgo).optimize(xml)
+		? Promise.resolve(Svgo.optimize(xml, opts.svgo))
 	: Promise.resolve({ data: xml }))
 	.then(result => `data:image/svg+xml;${opts.utf8 ? `charset=utf-8,${encodeUTF8(result.data)}` : `base64,${Buffer.from(result.data).toString('base64')}`}`);
 }
